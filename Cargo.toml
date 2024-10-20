@@ -1,0 +1,22 @@
+[package]
+name = "ferrokrait"
+version = "0.2.0"
+edition = "2021"
+authors = ["Aurlex"]
+repository = "https://github.com/aurlex/ferrokrait/"
+license = "MPL-2.0"
+readme = "README.md"
+homepage = "https://github.com/aurlex/ferrokrait"
+keywords = ["gamedev", "python"]
+
+[lib]
+name = "ferrokrait"
+crate-type = ["cdylib"]
+
+[dependencies]
+device_query = "1.1.2"
+pyo3 = { git = "https://github.com/pyo3/pyo3", features = ["extension-module"] }
+spin_sleep = "1.1.1"
+
+[patch.crates-io]
+device_query = { git = "https://github.com/aurlex/device_query" }
